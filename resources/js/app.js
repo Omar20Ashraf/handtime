@@ -12,6 +12,13 @@ createInertiaApp({
     setup({ el, App, props, plugin }) {
         createApp({ render: () => h(App, props) })
             .use(plugin)
+            .mixin({ methods: { route } })
             .mount(el);
+    },
+    progress: {
+        delay: 250,
+        color: "#29d",
+        includeCSS: true,
+        showSpinner: true,
     },
 });

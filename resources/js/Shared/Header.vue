@@ -1,73 +1,70 @@
 <template>
-    <div class="hero_area">
-        <header class="header_section">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg custom_nav-container">
-                    <a class="navbar-brand" href="index.html">
-                        <span> HandTime </span>
-                    </a>
+    <div>
+        <div class="hero_area">
+            <header class="header_section">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg custom_nav-container">
 
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span class=""> </span>
-                    </button>
+                        <Link :href="route('home')" class="navbar-brand">
+                            <span> HandTime </span>
+                        </Link>
 
-                    <div
-                        class="collapse navbar-collapse"
-                        id="navbarSupportedContent"
-                    >
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html"
-                                    >Home
-                                    <span class="sr-only">(current)</span></a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html"> About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="product.html"
-                                    >Products</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="testimonial.html"
-                                    >Testimonial</a
-                                >
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html"
-                                    >Contact Us</a
-                                >
-                            </li>
-                        </ul>
-                        <div class="user_optio_box">
-                            <a href="">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                            </a>
-                            <a href="">
-                                <i
-                                    class="fa fa-shopping-cart"
-                                    aria-hidden="true"
-                                ></i>
-                            </a>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class=""> </span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <NavLink :href="route('home')" :active="$page.component == 'Home/Index'">
+                                    Home
+                                </NavLink>
+
+                                <NavLink :href="route('about')" :active="$page.component == 'About'">
+                                    About
+                                </NavLink>
+
+                                <NavLink href="/products" :active="$page.component == 'Product'">
+                                    Products
+                                </NavLink>
+
+                                <NavLink href="/testimonial" :active="$page.component == 'Testimonial'">
+                                    Testimonial
+                                </NavLink>
+
+                                <NavLink href="/contact_us" :active="$page.component == 'Contact'">
+                                    Contact Us
+                                </NavLink>
+                            </ul>
+                            <div class="user_optio_box">
+                                <a href="#">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <slot />
+                    </nav>
+                </div>
+            </header>
+            <slot />
+        </div>
     </div>
 </template>
 
 <script>
-export default {};
+import { Link } from "@inertiajs/vue3";
+import NavLink from './NavLink.vue';
+
+export default {
+    components: {
+        Link,
+        NavLink,
+    },
+};
 </script>
