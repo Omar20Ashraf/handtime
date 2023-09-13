@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,4 +15,11 @@ use App\Http\Controllers\AboutController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/about', [AboutController::class, 'index'])->name('about');
+
+Route::inertia('/about', 'About')->name('about');
+
+Route::inertia('/testimonial', 'Testimonial')->name('testimonial');
+
+Route::inertia('/products', 'Product')->name('products');
+
+Route::inertia('/contact_us', 'Contact')->name('contact_us');

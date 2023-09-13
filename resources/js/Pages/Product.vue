@@ -1,19 +1,18 @@
 <template>
     <Header class="sub_page" />
 
-    <AboutSection />
-
+    <ProductSection />
 </template>
 
 <script>
 
 import Header from "../Shared/Header.vue";
-import AboutSection from "../Shared/Sections/AboutSection.vue";
+import ProductSection from "../Shared/Sections/ProductSection.vue";
 
 export default {
     components: {
         Header,
-        AboutSection
+        ProductSection
     },
 };
 </script>

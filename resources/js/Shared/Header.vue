@@ -28,15 +28,15 @@
                                     About
                                 </NavLink>
 
-                                <NavLink href="/products" :active="$page.component == 'Product'">
+                                <NavLink :href="route('products')" :active="$page.component == 'Product'">
                                     Products
                                 </NavLink>
 
-                                <NavLink href="/testimonial" :active="$page.component == 'Testimonial'">
+                                <NavLink :href="route('testimonial')" :active="$page.component == 'Testimonial'">
                                     Testimonial
                                 </NavLink>
 
-                                <NavLink href="/contact_us" :active="$page.component == 'Contact'">
+                                <NavLink :href="route('contact_us')" :active="$page.component == 'Contact'">
                                     Contact Us
                                 </NavLink>
                             </ul>
