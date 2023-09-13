@@ -27,13 +27,13 @@
 
 <script>
 
-import Header from "../../Shared/Header.vue";
-import Slider from "./Slider.vue";
-import Service from "./Service.vue";
-import AboutSection from "../../Shared/Sections/AboutSection.vue";
-import ProductSection from "../../Shared/Sections/ProductSection.vue";
-import ContactSection from "../../Shared/Sections/ContactSection.vue";
-import TestimonialSection from "../../Shared/Sections/TestimonialSection.vue";
+import Header from "../Shared/Header.vue";
+import Slider from "./Home/Slider.vue";
+import Service from "./Home/Service.vue";
+import AboutSection from "../Shared/Sections/AboutSection.vue";
+import ProductSection from "../Shared/Sections/ProductSection.vue";
+import ContactSection from "../Shared/Sections/ContactSection.vue";
+import TestimonialSection from "../Shared/Sections/TestimonialSection.vue";
 
 export default {
     components: {

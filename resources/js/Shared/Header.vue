@@ -20,7 +20,7 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
-                                <NavLink :href="route('home')" :active="$page.component == 'Home/Index'">
+                                <NavLink :href="route('home')" :active="$page.component == 'Home'">
                                     Home
                                 </NavLink>
 
