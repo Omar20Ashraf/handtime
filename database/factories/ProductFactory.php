@@ -23,8 +23,7 @@ class ProductFactory extends Factory
             'show_on_feature' => fake()->numberBetween(0, 1),
             'show_on_new_arrival' => fake()->numberBetween(0, 1),
             'title' => 'Watch',
-            'price' => fake()->randomFloat(3, 100),
-            'image' => 'image',
+            'price' => fake()->randomFloat(3, 100,1000),
             'rate' => 5,
         ];
     }

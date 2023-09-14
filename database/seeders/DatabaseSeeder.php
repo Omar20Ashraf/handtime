@@ -15,9 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Service::factory()->count(3)->create();
+        Service::factory()->count(4)->image()->create();
         About::factory()->count(1)->create();
-
         Product::factory()->count(9)->image()->create();
 
     }

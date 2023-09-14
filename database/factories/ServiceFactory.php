@@ -21,7 +21,17 @@ class ServiceFactory extends Factory
             //
             'title' => fake()->word,
             'detail' => fake()->text,
-            'image' =>  CreateDummyImage::create('services', 'feature-1.png')
         ];
+    }
+
+    public function image()
+    {
+        $images = ['feature-1.png', 'feature-2.png', 'feature-3.png', 'feature-4.png'];
+
+        return $this->state(function () use ($images) {
+            return [
+                'image' => CreateDummyImage::create('services', $images[array_rand($images)],),
+            ];
+        });
     }
 }
