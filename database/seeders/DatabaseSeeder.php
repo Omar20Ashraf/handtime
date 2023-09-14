@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\About;
+use App\Models\Product;
 use App\Models\Service;
 use Illuminate\Database\Seeder;
 
@@ -16,5 +17,8 @@ class DatabaseSeeder extends Seeder
     {
         Service::factory()->count(3)->create();
         About::factory()->count(1)->create();
+
+        Product::factory()->count(9)->image()->create();
+
     }
 }
