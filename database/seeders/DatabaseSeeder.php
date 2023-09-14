@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use App\Models\About;
 use App\Models\Product;
 use App\Models\Service;
+use App\Models\Testimonial;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,6 +19,7 @@ class DatabaseSeeder extends Seeder
         Service::factory()->count(4)->image()->create();
         About::factory()->count(1)->create();
         Product::factory()->count(9)->image()->create();
+        Testimonial::factory()->count(3)->create();
 
     }
 }
